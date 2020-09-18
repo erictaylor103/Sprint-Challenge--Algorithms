@@ -9,14 +9,15 @@ def count_th(word):
     #base case -> check if the string is empty 
     if not word:
         return 0
-    
+    #check if th is found in the word by checking in pairs of letters in the word
     if word[:2] == "th":
+        #if th is found in the word string set count to 1
         count = 1
         print(word[:2])
-    
+    #if the th string is not found in word, set the count to 0
     else:
         count = 0
-    
+    #call the "count_th" method
     return count + count_th(word[1:])
     
     
